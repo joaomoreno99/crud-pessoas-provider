@@ -31,6 +31,9 @@
   Exemplo:
   Se nome cadastrado no input for "Marcelino Popo" o avatar devera apresentar o text MP na sua visualizacao 
 
+  Modelo do avatar :
+  ![Exemplo Avatar]( https://callstack.github.io/react-native-paper/screenshots/avatar-text.png)
+
 
 
 ### Componentes do Grupo:
