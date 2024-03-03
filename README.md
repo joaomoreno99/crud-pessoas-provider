@@ -1,11 +1,37 @@
-# Sample Snack app
+# Atividade da disciplina de Desenvolvimento de Software para Dispositivos Móveis
+  ## No que consite:
+  Adicionar novas funcionalidades ao projeto base Crud-Pessoas-Provider
+  
+  As melhorias propostas sao: 
+  
+  * Adicionar modal de sobre o App
+  * Adicionar modal de confirmacao para exclusao de item
+  * Adicionar Avatar para cada item da lista contento as inciais do nome cadastrado
+    
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+  ## Um pouco mais sobre cada funcionalidade:
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+  ### Adicionar modal de sobre o App:
+  Consite e um [modal](https://callstack.github.io/react-native-paper/docs/components/Modal) com informacoes que descrevem as funcioanlidade do app e a versao no qual se encontra 
+    
+  Modelo do uso do modal :
+  
+  ![Exemplo Modal](https://callstack.github.io/react-native-paper/screenshots/modal.gif)
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+   ## Um pouco mais sobre cada funcionalidade:
+
+  ### Adicionar confirmacao para exclusao de item:
+  Consite e um [modal](https://callstack.github.io/react-native-paper/docs/components/Modal) com texto para confirmacao de exclusao de item. O modal deve possuir 2 butoes , um para cancelar a acao que devera somente fechar o modal de confirmacao, e um botao para confirmacao que devera chamar a funcao ja existente .
+
+  ### Adicionar Avatar para cada item da lista contento as inciais do nome cadastrado:
+  Consite e um componente de [avatar](https://callstack.github.io/react-native-paper/docs/components/Modal) com as inicias do nome cadastrado.
+
+  Exemplo:
+  Se nome cadastrado no input for "Marcelino Popo" o avatar devera apresentar o text MP na sua visualizacao 
+
+
+
+### Componentes do Grupo:
+  Joao Vitor Moreno
