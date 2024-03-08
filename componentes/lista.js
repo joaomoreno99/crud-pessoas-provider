@@ -1,5 +1,5 @@
 import { View, SafeAreaView, StyleSheet, FlatList } from 'react-native';
-import { List, Text, IconButton, Divider, useTheme } from 'react-native-paper';
+import { Avatar, List, Text, IconButton, Divider, useTheme } from 'react-native-paper';
 import { useAppContext } from './provider';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -35,12 +35,30 @@ export default function Lista() {
         />
       );
     };
+    const formatAvatarText = (name) => {
+      let nameHasList = name.split(" ")
+      if(nameHasList.length >= 2){
+        return nameHasList[0].charAt(0)+nameHasList[1].charAt(0)
+      }
+        return nameHasList[0].charAt(0)
+     }
+    const AvatarItem = () => {
+      return(
+         <Avatar.Text 
+            size={32}
+            style={styles.avatar_item}
+            maxFontSizeMultiplier= {2}
+            label= {formatAvatarText(item.nome)}
+            />
+      );
+    }
     return (
       <List.Item
         title={item.nome}
         style={selecionado && styles.item_selecionado}
         onPress={() => selecionarPessoa(item)}
-        right={selecionado && BotaoRemover}></List.Item>
+        right={selecionado && BotaoRemover}
+        left= {AvatarItem}></List.Item>
     );
   };
   return (
@@ -76,7 +94,7 @@ export default function Lista() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, minHeight:200 },
+  container: { flex: 1, minHeight: 200 },
   lista_mensagem_vazio: { marginHorizontal: 16 },
   cabecalho: {
     flex: 1,
@@ -88,4 +106,10 @@ const styles = StyleSheet.create({
   item_selecionado: {
     backgroundColor: 'lightgray',
   },
+  avatar_item: {
+    marginStart: 20,
+    alignContent: "flex-start",
+    alignSelf: "center"
+
+  }
 });
