@@ -38,3 +38,4 @@
 
 ### Componentes do Grupo:
   Joao Vitor Moreno
+  Igor Brito dos Santos

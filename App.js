@@ -1,4 +1,4 @@
-import { StyleSheet, SafeAreaView } from 'react-native';
+import { StyleSheet, SafeAreaView, View, Text, Button } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Appbar, Snackbar } from 'react-native-paper';
 import { useState } from 'react';
@@ -6,12 +6,24 @@ import { useState } from 'react';
 import { AppProvider } from './componentes/provider';
 import Formulario from './componentes/formulario';
 import Lista from './componentes/lista';
+import Modal from './componentes/Modal';
+
+
 
 export default function App() {
   const [notificacaoVisivel, setNotificacaoVisivel] = useState(false);
   const onDismissNotificacao = () => setNotificacaoVisivel(false);
   const onAdicionarPessoa = () => setNotificacaoVisivel(true);
+  const [visivel, setVisivel]=useState(false);
   return (
+    <View>
+          <Modal
+                animationType="slide"
+                transparent={true}
+                visible={visivel}
+          >
+          </Modal>
+    
     <SafeAreaProvider>
       <AppProvider
         onAdicionarPessoa={onAdicionarPessoa}
@@ -37,6 +49,7 @@ export default function App() {
         </SafeAreaView>
       </AppProvider>
     </SafeAreaProvider>
+    </View>
   );
 }
 
